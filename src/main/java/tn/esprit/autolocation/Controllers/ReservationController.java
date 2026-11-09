@@ -38,4 +38,19 @@ public class ReservationController {
     public List<Reservation> afficherReservations() {
         return reservationService.afficherReservations();
     }
+
+    @PutMapping("/affecterClientAReservation/{idClient}/{idReservation}")
+    public void affecterClientAReservation(@PathVariable Long idClient, @PathVariable Long idReservation) {
+        reservationService.affecterClientAReservation(idClient, idReservation);
+    }
+
+    @PutMapping("/affecterContratAReservation/{idContrat}/{idReservation}")
+    public void affecterContratAReservation(@PathVariable Long idContrat, @PathVariable Long idReservation) {
+        reservationService.affecterContratAReservation(idContrat, idReservation);
+    }
+
+    @PutMapping("/desaffecterContratDeReservation/{idReservation}")
+    public void desaffecterContratDeReservation(@PathVariable Long idReservation) {
+        reservationService.desaffecterContratDeReservation(idReservation);
+    }
 }

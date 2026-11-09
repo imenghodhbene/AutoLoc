@@ -10,4 +10,5 @@ void supprimerAgence (Long id) ;
 List <Agence> afficherAgences ();
     Agence modifierAgence (Agence agence);
     Agence AfficherAgenceByID (Long id);
+    Agence affecterVehiculesAgence(Agence agence);
 }

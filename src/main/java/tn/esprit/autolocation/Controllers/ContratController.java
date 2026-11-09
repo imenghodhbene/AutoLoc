@@ -38,4 +38,9 @@ public class ContratController {
     public List<Contrat> afficherContrats() {
         return contratService.afficherContrats();
     }
+
+    @PutMapping("/affecterPaiementAContrat/{idPaiement}/{idContrat}")
+    public void affecterPaiementAContrat(@PathVariable Long idPaiement, @PathVariable Long idContrat) {
+        contratService.affecterPaiementAContrat(idPaiement, idContrat);
+    }
 }

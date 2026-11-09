@@ -48,5 +48,9 @@ public class AgenceController {
         return agenceSerive.afficherAgences();
     }
 
+    @PostMapping("/assignVehiculeToAgence")
+    public Agence affecterVehiculesAgence(@RequestBody Agence agence) {
+        return agenceSerive.affecterVehiculesAgence(agence);
+    }
 
 }

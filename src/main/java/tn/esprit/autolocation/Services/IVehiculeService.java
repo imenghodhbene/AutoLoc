@@ -11,4 +11,8 @@ public interface IVehiculeService {
     Vehicule modifierVehicule (Vehicule vehicule);
     Vehicule AfficherVehiculeByID (Long id);
 
+    void affecterVehiculeAAgence(Long idVehicule, Long idAgence);
+    void desaffecterVehiculeDAgence(Long idVehicule);
+    void affecterEquipementAVehicule(Long idEquipement, Long idVehicule);
+    void desaffecterEquipementDeVehicule(Long idEquipement, Long idVehicule);
 }
